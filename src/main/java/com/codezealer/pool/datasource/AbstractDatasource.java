@@ -9,50 +9,42 @@ import java.sql.SQLException;
 import java.sql.SQLFeatureNotSupportedException;
 import java.util.logging.Logger;
 
-public class AbstractDatasource implements DataSource, IConfig {
+public class AbstractDatasource extends DataSourceAdaptor {
 
-    @Override
-    public Connection getConnection() throws SQLException {
-        return null;
+    private String driverClass;
+    private String jdbcUrl;
+    private String user;
+    private String password;
+
+    public String getDriverClass() {
+        return driverClass;
     }
 
-    @Override
-    public Connection getConnection(String username, String password) throws SQLException {
-        return null;
+    public void setDriverClass(String driverClass) {
+        this.driverClass = driverClass;
     }
 
-    @Override
-    public <T> T unwrap(Class<T> iface) throws SQLException {
-        return null;
+    public String getJdbcUrl() {
+        return jdbcUrl;
     }
 
-    @Override
-    public boolean isWrapperFor(Class<?> iface) throws SQLException {
-        return false;
+    public void setJdbcUrl(String jdbcUrl) {
+        this.jdbcUrl = jdbcUrl;
     }
 
-    @Override
-    public PrintWriter getLogWriter() throws SQLException {
-        return null;
+    public String getUser() {
+        return user;
     }
 
-    @Override
-    public void setLogWriter(PrintWriter out) throws SQLException {
-
+    public void setUser(String user) {
+        this.user = user;
     }
 
-    @Override
-    public void setLoginTimeout(int seconds) throws SQLException {
-
+    public String getPassword() {
+        return password;
     }
 
-    @Override
-    public int getLoginTimeout() throws SQLException {
-        return 0;
-    }
-
-    @Override
-    public Logger getParentLogger() throws SQLFeatureNotSupportedException {
-        return null;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
