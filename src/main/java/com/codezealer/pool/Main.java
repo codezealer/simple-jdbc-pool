@@ -1,4 +1,4 @@
-package com.codezealer;
+package com.codezealer.pool;
 
 public class Main {
     public static void main(String[] args) {
