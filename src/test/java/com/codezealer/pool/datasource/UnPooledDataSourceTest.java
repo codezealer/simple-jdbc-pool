@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class UnPooledDatasourceTest {
+public class UnPooledDataSourceTest {
 
     @Test
     public void test() throws SQLException {

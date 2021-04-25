@@ -1,15 +1,6 @@
 package com.codezealer.pool.datasource;
 
-import com.codezealer.pool.api.IConfig;
-
-import javax.sql.DataSource;
-import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.SQLFeatureNotSupportedException;
-import java.util.logging.Logger;
-
-public class AbstractDatasource extends DataSourceAdaptor {
+public class AbstractDataSourceConfig extends DataSourceConfigAdaptor {
 
     private String driverClass;
     private String jdbcUrl;
