@@ -6,4 +6,5 @@ public interface IPooledDatasourceConfig {
 
     void setMinSize(int size);
 
+    void setMaxWaitMills(int maxWaitMills);
 }

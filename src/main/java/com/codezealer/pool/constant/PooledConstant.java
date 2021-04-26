@@ -6,4 +6,5 @@ public interface PooledConstant {
 
     int MIN_SIZE = 10;
 
+    int MAX_WAIT_MILLS = 10;
 }

@@ -73,7 +73,9 @@ public class PooledConnection implements IPooledConnection {
 
     @Override
     public void close() throws SQLException {
-        connection.close();
+        //不实际关闭连接,只是设置状态
+        this.isBusy = false;
+
     }
 
     @Override

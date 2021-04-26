@@ -7,8 +7,10 @@ import com.codezealer.pool.constant.PooledConstant;
 public class AbstractPooledDataSourceConfig extends AbstractDataSourceConfig implements IPooledDatasourceConfig, ILifeCycle {
 
 
-    int maxSize = PooledConstant.MAX_SIZE;
-    int minSize = PooledConstant.MIN_SIZE;
+    protected int maxSize = PooledConstant.MAX_SIZE;
+    protected int minSize = PooledConstant.MIN_SIZE;
+
+    protected int maxWaitMills = PooledConstant.MAX_WAIT_MILLS;
 
 
     @Override
@@ -29,5 +31,10 @@ public class AbstractPooledDataSourceConfig extends AbstractDataSourceConfig imp
     @Override
     public void setMinSize(int size) {
         this.minSize = size;
+    }
+
+    @Override
+    public void setMaxWaitMills(int maxWaitMills) {
+        this.maxWaitMills = maxWaitMills;
     }
 }
